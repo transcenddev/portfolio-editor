@@ -1,0 +1,197 @@
+:root {
+  --ff-base: 'Outfit', sans-serif;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: var(--ff-base);
+  line-height: 1.5;
+  height: 100vh;
+  margin: 0;
+
+}
+
+#navbar {
+  z-index: 999;
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar>.nav-section {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+#nav-logo-section {
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.nav-section>a {
+  font-size: 0.7rem;
+  transition: all 300ms ease;
+}
+
+.nav-section>a:hover {
+  opacity: 0.5;
+}
+
+#nav-logo-section>a>i {
+  font-size: 2rem;
+}
+
+#nav-link-section {
+  gap: 4rem;
+}
+
+@media (max-width: 40rem) {
+  #nav-social-section {
+    display: none;
+  }
+}
+
+.main>section {
+  height: 100vh;
+  height: 100dvh;
+  margin-inline: auto;
+}
+
+.main>section:nth-child(2) {
+  height: 100%;
+}
+
+.hero-section {
+  display: grid;
+  place-items: center;
+  width: min(1000px, 100% - 3rem);
+}
+
+.hero-section .hero-title {
+  font-size: 1rem;
+}
+
+.line-1 {
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 21em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Projects */
+
+.project-section-header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
